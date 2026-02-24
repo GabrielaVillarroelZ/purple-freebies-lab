@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Purple Freebies Lab 💜</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0b0614;
+      --card: rgba(255,255,255,0.06);
+      --accent: #9b5cff;
+      --accent-soft: #cdb2ff;
+      --text: #f5f3ff;
+      --muted: #b9b4d6;
+      --glass: rgba(255,255,255,0.08);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Poppins', sans-serif; background: radial-gradient(circle at 20% 20%, #1a0f33, #0b0614 60%); color: var(--text); line-height: 1.6; overflow-x: hidden; }
+    header { padding: 70px 20px 50px; text-align: center; position: relative; }
+    .glow { position: absolute; width: 500px; height: 500px; background: radial-gradient(circle, rgba(155,92,255,0.4), transparent 60%); top: -200px; left: 50%; transform: translateX(-50%); filter: blur(60px); z-index: -1; }
+    h1 { font-size: 2.6rem; font-weight: 700; }
+    .subtitle { margin-top: 10px; color: var(--muted); font-size: 1rem; max-width: 500px; margin-inline: auto; }
+    .hero-btn { margin-top: 25px; display: inline-block; background: linear-gradient(135deg, #9b5cff, #c77dff); padding: 12px 22px; border-radius: 999px; text-decoration: none; color: white; font-weight: 600; transition: 0.3s; border: none; cursor: pointer; }
+    .hero-btn:hover { transform: translateY(-3px) scale(1.03); box-shadow: 0 10px 30px rgba(155,92,255,0.4); }
+    .glow-click { animation: glowClick 0.5s ease forwards; }
+    @keyframes glowClick {
+      0% { box-shadow: 0 0 0px rgba(155,92,255,0.8); }
+      50% { box-shadow: 0 0 20px rgba(155,92,255,0.8); transform: scale(1.05); }
+      100% { box-shadow: 0 0 0px rgba(155,92,255,0); transform: scale(1); }
+    }
+    section { padding: 55px 20px; max-width: 1000px; margin: auto; }
+    .section-title { font-size: 1.6rem; margin-bottom: 20px; font-weight: 600; text-align: center; }
+    .bts-banner { background: linear-gradient(135deg, rgba(155,92,255,0.25), rgba(199,125,255,0.1)); border-radius: 18px; padding: 25px; backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.08); text-align: center; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 16px; margin-top: 20px; }
+    .card { background: var(--card); border-radius: 16px; padding: 18px; text-align: center; backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,0.08); transition: 0.25s ease; }
+    .card:hover { transform: translateY(-5px); box-shadow: 0 8px 25px rgba(155,92,255,0.25); }
+    .emoji { font-size: 1.8rem; margin-bottom: 6px; }
+    .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 14px; margin-top: 10px; }
+    .stat { background: var(--glass); border-radius: 14px; padding: 16px; text-align: center; }
+    .stat h3 { color: var(--accent-soft); font-size: 1.2rem; }
+    .form-card { display: none; margin-top: 20px; background: var(--card); padding: 16px; border-radius: 18px; border: 1px solid rgba(255,255,255,0.08); animation: fadeIn 0.35s ease; }
+    #lentesResult { text-align: center; margin-top: 12px; color: var(--accent-soft); font-weight:600; }
+    footer { text-align: center; padding: 35px 20px 50px; color: var(--muted); font-size: 0.85rem; }
+    .sparkle { position: fixed; width: 3px; height: 3px; background: white; border-radius: 50%; opacity: 0.7; animation: float 8s linear infinite; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes float { from { transform: translateY(0); opacity: 0; } 50% { opacity: 0.8; } to { transform: translateY(-120vh); opacity: 0; } }
+    @media (max-width: 600px) { h1 { font-size: 2.1rem; } .subtitle { font-size: 0.9rem; } section { padding: 45px 18px; } }
+  </style>
+</head>
+<body>
+  <div class="glow"></div>
+
+  <header>
+    <h1>Purple Freebies Lab 💜</h1>
+    <p class="subtitle">Freebies hechos con amor para fans que sienten demasiado.</p>
+    <button class="hero-btn" onclick="scrollToFreebies()">Ver freebies</button>
+  </header>
+
+  <section>
+    <div class="bts-banner">
+      <h2>💜 Era BTS activada</h2>
+      <p style="color:var(--muted)">Preparando freebies especiales para ARMY. Borahae siempre.</p>
+    </div>
+  </section>
+
+  <section id="freebies">
+    <h2 class="section-title">🎁 Freebies</h2>
+    <div class="grid">
+      <div class="card"><div class="emoji">📸</div>Photocards</div>
+      <div class="card"><div class="emoji">✨</div>Stickers</div>
+      <div class="card"><div class="emoji">🪄</div>Charms</div>
+      <div class="card"><div class="emoji">🕶️</div>Lentes</div>
+      <div class="card"><div class="emoji">🎀</div>Packs sorpresa</div>
+      <div class="card"><div class="emoji">💌</div>Próximos drops</div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title">📊 Stats del laboratorio</h2>
+    <div class="stats">
+      <div class="stat"><h3>300+</h3><p>Freebies creados</p></div>
+      <div class="stat"><h3>∞</h3><p>Fans felices</p></div>
+      <div class="stat"><h3>2am</h3><p>Hora creativa oficial</p></div>
+      <div class="stat"><h3>7</h3><p>Tijeras perdidas</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title">💌 Reserva tu freebie</h2>
+    <p style="text-align:center;color:var(--muted);margin-bottom:12px">Solo para ARMY que encuentren esta página 💜</p>
+    <div style="text-align:center">
+      <button class="hero-btn" onclick="toggleForm()">Reservar ahora 💜</button>
+    </div>
+
+    <div class="form-card" id="formCard">
+      <iframe 
+        src="https://docs.google.com/forms/d/e/1FAIpQLSfw-InbQ0xiXcCM3nuL2gkFudpl3qoRC3963PPpqTTt34E0Xg/viewform?embedded=true"
+        width="100%" height="1000" style="border:none;border-radius:12px;">
+      </iframe>
+    </div>
+
+    <!-- Botón de lentes aleatorio FUERA del formulario con efecto glow -->
+    <div style="margin-top:20px; text-align:center;">
+      <button id="lentesBtn" class="hero-btn" onclick="randomLentesGlow()">¿Te llevas los lentes? 😎</button>
+      <p id="lentesResult"></p>
+    </div>
+  </section>
+
+  <footer>
+    Sígueme en <a href="https://instagram.com/GValentinaV22" target="_blank" style="color: var(--accent); text-decoration:none; font-weight:600;">Instagram 💜</a><br>
+    Made with love, glitter & glue 💜<br>
+    © 2026 Purple Freebies Lab
+  </footer>
+
+  <script>
+    function toggleForm() {
+      const f = document.getElementById('formCard');
+      f.style.display = f.style.display === 'block' ? 'none' : 'block';
+      f.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+
+    function scrollToFreebies(){
+      document.getElementById('freebies').scrollIntoView({behavior:'smooth'});
+    }
+
+    function randomLentesGlow() {
+      const resultado = Math.random() < 0.5 ? '💜 Te llevas los lentes, ARMY! 😎' : '💜 Oh no… hoy no hay lentes, pero sigue intentando! 💖';
+      const p = document.getElementById('lentesResult');
+      p.textContent = resultado;
+      p.style.opacity = 0;
+      p.style.transition = 'opacity 0.5s';
+      setTimeout(() => { p.style.opacity = 1; }, 50);
+
+      const btn = document.getElementById('lentesBtn');
+      btn.classList.add('glow-click');
+      setTimeout(() => { btn.classList.remove('glow-click'); }, 500);
+    }
+
+    function createSparkle() {
+      const s = document.createElement('div');
+      s.className = 'sparkle';
+      s.style.left = Math.random() * 100 + 'vw';
+      s.style.animationDuration = 5 + Math.random() * 5 + 's';
+      document.body.appendChild(s);
+      setTimeout(() => s.remove(), 8000);
+    }
+    setInterval(createSparkle, 500);
+  </script>
+</body>
+</html>
